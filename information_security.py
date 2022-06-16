@@ -105,13 +105,12 @@ def decrypt():  #decryption
     while i>0:
         loc=list()
         loc=locindex(msg_list[i])  
-        print(loc)  
+       # print(loc)  
          
-
         loc1=list()
         loc1=locindex(msg_list[i-1])
-        print(loc1)
-        print(msg_list[i],msg_list[i-1])
+       # print(loc1)
+       # print(msg_list[i],msg_list[i-1])
         if loc[0][1]==loc1[0][1]:
         
             if loc[0][0]!=4 :
@@ -136,8 +135,7 @@ def decrypt():  #decryption
             else :
                 msg_list[i] = my_matrix[loc[0][0]][loc[0][1]+1]
                 msg_list[i-1] = my_matrix[loc1[0][0]][0]
-          
-
+         
         else:
             
             if loc[0][1]<loc1[0][1]:
@@ -147,12 +145,7 @@ def decrypt():  #decryption
             elif loc[0][1]>loc1[0][1]:
                 msg_list[i-1] = my_matrix[loc1[0][0]][loc[0][1]]
                 msg_list[i] = my_matrix[loc[0][0]][loc1[0][1]]
-          
-                
-        
-            
-             
-             
+                       
         i=i-1       
     print("PLAIN TEXT:",msg_list)
 while(1):
